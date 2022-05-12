@@ -1,0 +1,604 @@
+/* 
+1. Posicionamiento
+2. Modelo caja (box model)
+3. Tipografia
+4. Visuales
+5. Otros
+*/
+:root {
+    /* Colores */
+    --btc-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --white: #FFF;
+    --lg: 700;
+    --md: 500;
+    --sm: 400;
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img {
+    width: 151px;
+    height: 24px;
+    margin-top: 78px;
+    align-self: center;
+}
+
+.header--title-container {
+    align-self: center;
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 229px;
+    margin-top: 36px;
+    text-align: center;
+}
+
+.header--title-container h1 {
+    font-weight: var(--lg);
+    line-height: 2.6rem;
+    font-size: 2.4rem;
+    color: var(--white);
+}
+
+.header--title-container p {
+    margin-top: 24px;
+    font-weight: var(--md);
+    line-height: 2.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+
+.header--title-container .header--button {
+    position: absolute;
+    top: 310px;
+    left: calc(50% - 118px);
+    width: 230px;
+    height: 48px;
+    padding: 12px 16px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 4px;
+    font-weight: var(--lg);
+    font-size: 1.4rem;
+    color: var(--warm-black);
+    text-decoration: none;
+    background-color: var(--off-white);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.header--button span {
+    display: inline-block;
+    margin-left: 10px;
+    width: 19px;
+    height: 16px;
+    background-image: url('./assets/icons/mdi_keyboard_arrow_down.svg');
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding-top: 40px; 
+    background-color: var(--off-white);
+}
+
+.exchange {
+    width: 100%;
+    height: auto;
+}
+
+.exchange--background {
+    width: 195px;
+    height: 195px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-image: url('./assets/imgs/bitcoin.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.exchange--title {
+    width: 90%;
+    height: auto;
+    min-width: 320px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.exchange--title h2 {
+    width: 288px;
+    height: 52px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    font-size: 2.4rem;
+    font-weight: var(--lg);
+    line-height: 2.6rem;
+    text-align: center;
+}
+
+.exchange--title p {
+    width: 288px;
+    height: 52px;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #757575;
+}
+
+.exchange--table {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scroll-snap-align: center;
+}
+.exchange--currency-table {
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    scroll-snap-align: center;
+}
+
+.exchange--currency-table .currency-table--title {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: var(--lg);
+    line-height: 2.4rem;
+    color: var(--btc-orange);
+}
+
+.exchange--currency-table .currency-table--title__comisiones {
+    color: var(--secondary-blue);
+}
+.currency-table--container {
+    width: 90%;
+    min-width: 230px;
+    max-width: 500px;
+    height: 159px;
+    margin: 0 auto;
+}
+
+.currency-table--container table {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.currency-table--container td {
+    padding: 10px 12px 10px 12px;
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: var(--md);
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--white);
+}
+
+.currency-table--container .table__right {
+    padding: 11px 34px 11px 12px;
+    font-size: 1.4rem;
+    font-weight: var(--sm);
+    color: #757575;
+    line-height: 16.94px;
+    text-align: center;
+}
+
+.currency-table--container .table__top-left {
+    border-radius: 15px 0 0 0;
+}
+
+.currency-table--container .table__top-right {
+    border-radius: 0 15px 0 0;
+}
+
+.currency-table--container .table__bottom-right {
+    border-radius: 0 0 15px 0;
+}
+
+.currency-table--container .table__bottom-left {
+    border-radius: 0 0 0 15px;
+}
+/* Flechas de tendencia */
+
+.currency-table--container .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/trending-down.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.currency-table--container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/trending-up.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.currency-table--date {
+    width: 200px;
+    height: 31px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+
+.currency-table--date__comisiones-color {
+    background-color: #E7F5FF;
+}
+
+.currency-table--date p {
+    font-size: 1.2rem;
+    line-height: 1.936rem;
+    color: var(--warm-black);
+    text-align: center;
+}
+
+.main-product-detail {
+    position: relative;
+    padding: 20px 10px;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding-top: 50px;
+    background-color: var(--warm-black);
+}
+
+.main-product-detail > span {
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 22px);
+    width: 51px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(./assets/icons/batata.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-product-detail--title {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.main-product-detail--title h2 {
+    margin-bottom: 18px;
+    font-size: 2.4rem;
+    font-weight: var(--lg);
+    line-height: 26px;
+    color: var(--white);
+}
+
+.main-product-detail--title p {
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+    font-weight: var(--md);
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.main-product-detail--card {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 20px 20px 22px 16px;
+    width: 80%;
+    min-width: 288px;
+    max-width: 400px;
+    height: auto;
+    background-color: var(--black);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.main-product-detail--card h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: var(--lg);
+    line-height: 1.8rem;
+    color: var(--white);
+}
+
+.main-product-detail--card p {
+    font-size: 1.4rem;
+    font-weight: var(--md);
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.card__clock {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/clock.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card__eye {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/eye.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card__dollar {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/dollar-sign.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card__dollar {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/dollar-sign.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card__check {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/check-circle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-background-only {
+    width: 100%;
+    min-width: 320px;
+    height: 80vh;
+    padding-top: 50px;
+    text-align: center;
+    background-image: url(./assets/imgs/bitcoinbaby.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    font-weight: var(--lg);
+    font-size: 2rem;
+    line-height: 2.6rem;
+}
+
+.main-plans {
+    width: 100%;
+    height: auto;
+    padding: 64px 17px 64px 15px;
+    background-color: var(--white);
+}
+
+.main-plans--card {
+    padding-top: 20px;
+    display: flex;
+    gap: 5px;
+    height: 288px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.main-plans--card,
+.card--container{
+    margin: 0 auto;
+}
+
+.main-plans--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-plans--title h2 {
+    height: 52px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    font-size: 2.4rem;
+    font-weight: var(--lg);
+    line-height: 2.6rem;
+    overflow: visible;
+    color: var(--warm-black),
+}
+
+.main-plans--title p {
+    margin-bottom: 34px;
+    font-size: 1.4rem;
+    font-weight: var(--md);
+    line-height: 1.8rem;
+    color: #757575;
+
+}
+
+.card--container {
+    position: relative;
+    scroll-snap-align: center;
+    margin: 0 auto;
+    padding: 31px 19px 24px 20px;
+    width: 70%;
+    min-width: 190px;
+    max-width: 288px;
+    height:247px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    text-align: center;
+}
+
+.card--recomended {
+    position: absolute;
+    width: 100px;
+    min-width: 100px;
+    height: 31px;
+    top: -16px;
+    left: calc(50% - 50px);
+    font-size: 1.2rem;
+    font-weight: var(--md);
+    line-height: 31px;
+    color: var(--white);
+    background-color: var(--btc-orange);
+    border-radius: 8px;
+}   
+
+.card-info--title {
+    margin-top:16px;
+    font-size: 1.4rem;
+    font-weight: var(--md);
+    line-height: 1.8rem;
+}
+
+.card-info--price {
+    margin-bottom: 16px;;
+    font-size: 5.2rem;
+    font-weight: var(--lg);
+    line-height: 6.3rem;
+}
+
+.card-info--price sup {
+    font-size: 1.4rem;
+    font-weight: var(--sm);
+    line-height: 1.5rem;
+}
+
+.card-info--comparator {
+    font-size: 1.2rem;
+    font-weight: var(--md);
+    line-height: 1.4rem;
+    color: #757575;
+}
+
+.card-info--choose {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 16px;
+    width: 151px;
+    min-width: 100px;
+    height: 48px;
+    font-size: 1.4rem;
+    font-weight: var(--lg);
+    color:var(--warm-black);
+    background-color: var(--off-white);
+    border: solid 2px;
+    border-color: var(--btc-orange);
+    border-radius: 4px;
+}
+
+.card-info--choose span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('./assets/icons/arrow-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* se puede usar vertical-align: text-bottom */
+
+footer {
+    display: flex;
+    width: 100%;
+    min-width: 320px;
+    height: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--btc-orange);
+}
+
+.footer--list-container ul {
+    list-style-type: none;
+    font-size: 1.4rem;
+    font-weight: var(--md);
+    line-height: 1.8rem;
+}
+.footer--list-container li {
+    margin-bottom: 8px;
+}
+.footer--list-container a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer--logo {
+    font-size: 0.8rem;
+    font-weight: var(--md);
+    text-align: center;
+    color: var(--white);
+}
+.footer--logo img {
+    margin-bottom: 8px;
+}
+
